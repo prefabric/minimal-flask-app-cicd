@@ -1,0 +1,17 @@
+{
+  "context": {
+    "config": {
+      "app_name": "PythonApp",
+      "github_secret_name": "github-token",
+      "source": {
+        "owner": "prefabric",
+        "repo": "minimal-flask-app-cicd"
+      },
+      "prod": {
+        "cidr": "10.100.0.0",
+        "max_azs": 1,
+        "nat_gateways": 0
+      }
+    }
+  }
+}

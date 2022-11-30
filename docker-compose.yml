@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:13.3
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: flask_app
+  
+  app:
+    image: $IMAGE_URI
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      FLASK_APP: flask_app
+      FLASK_ENV: production
+      FLASK_APP_DB_USER: postgres
+      FLASK_APP_DB_PASS: example
+      FLASK_APP_DB_URL: db:5432
+      FLASK_APP_DB_NAME: postgres
