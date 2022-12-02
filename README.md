@@ -30,7 +30,7 @@ Workflow:
 7. The new version of the Flask app docker image is pulled, built and started
 
 > **Warning**
-> - There is some downtime when deploying to the instance\
+> - There is some downtime when deploying to the instance
 > - Terminating the instance will destroy the database. Enable snapshots if you care about the data.
 
 
